@@ -28,6 +28,7 @@ describe('Cinema', function () {
     assert.deepStrictEqual(actual, films);
   });
 
+
   it('should be able to get a list of film titles', function(){
     const actual = cinema.filmTitles();
     assert.deepStrictEqual(actual, ['Moonlight', 'Blade Runner 2049', 'Dunkirk', 'Black Panther', 'T2 Trainspotting']);
@@ -36,7 +37,7 @@ describe('Cinema', function () {
 
 
   it('should be able to find a film by title', function(){
-    const actual = cinema.findFilm('Dunkirk');
+    const actual = cinema.findFilmByTitle('Dunkirk');
     assert.deepStrictEqual(actual, dunkirk);
   });
 
@@ -64,7 +65,7 @@ describe('Cinema', function () {
 
 
   it('should be able to check whether all films are over a particular length', function(){
-    const actual = cinema.filmLength(100);
+    const actual = cinema.filmLength(90);
     assert.deepStrictEqual(actual, true);
   });
 
